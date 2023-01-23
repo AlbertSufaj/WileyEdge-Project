@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 align = "center">Metro Station</h1>
+	<h2 style="color:blue;" th:text="'Welcome '+${session.user.firstName}+'!'"></h2>
+	<h2 align = "right" th:text="'Your card number is: '+${session.user.userId}"></h2>
+	<h2 align = "right" th:text="'Your card number is: '+${session.user.salary}"></h2>
+<br><br>
+
+	<p th:text="${message}" style="color: red"></p>
+	<a href="./menu">GoTo Menu Page</a>
+</body>
+</html>

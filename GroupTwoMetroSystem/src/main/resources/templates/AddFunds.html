@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 align = "center">Metro Station</h1>
+	<hr>
+	<h2 style="color:blue;" th:text="'Welcome '+${session.user.firstName}+'!'"></h2>
+	<h2 align = "right" th:text="'Your card number is: '+${session.user.userId}"></h2>
+	<h2 align = "right" th:text="'Your card number is: '+${session.user.salary}"></h2>
+	<hr>
+	<h3 style="color:blue;">Select one of the options below to add funds</h3>
+	<!--  <button id="twenty" onClick="location.href='./addFundUser'" value=20>Add £20</button><br></br>
+	<button id="fifty" onClick="location.href='./addFundUser'" value=50>Add £50</button><br></br>
+	<button id="hundred" onClick="location.href='./addFundUser'" value=100>Add £100</button><br></br> -->
+	
+	<form action="./addFundUser" method = "get">
+	Enter Amount to Add : <select  name="funds">
+	<option value=5.0>5</option>
+	<option value=10.0>10</option>
+	<option value=20.0>20</option>
+	<option value=50.0>50</option>
+	</select><br><br>
+	
+	<input type="submit" value="Add Funds">
+	
+	</form>
+	<a href="./menu">Return To Menu</a>
+<br><br>
+<p th:text="${message}" style="color: red"></p>
+</body>
+</html>
